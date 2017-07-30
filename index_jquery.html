@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name ="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+  <title>
+    Test page.
+  </title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  <style>
+  .box{
+    border: 1px solid black;
+    height: 200px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container box">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#Home" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="#About" class="nav-link disabled">About</a></li>
+      <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
+      <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item active">Home</a>
+          <a href="#" class="dropdown-item ">About</a>
+          <a href="#" class="dropdown-item ">Contacts</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script>
+    console.dir(document);
+    $(document).ready(function () {
+        $('.nav-link').on('click', function (e) {
+            e.preventDefault();
+            console.log(this.hash);
+            console.log(this);
+        })
+    })
+  </script>
+</body>
+
+</html>
